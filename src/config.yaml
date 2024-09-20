@@ -1,6 +1,6 @@
 site:
-  name: PRO
-  site: 'https://astrowind.vercel.app'
+  name: PRObservatory
+  site: 'https://probservatory.org'
   base: '/'
   trailingSlash: false
 
@@ -9,14 +9,14 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: PRO
-    template: '%s — PRO'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: PRObservatory
+    template: '%s — PRObservatory'
+  description: "\U0001F4E1 PRISMS Radio-Astronomy Observatory"
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: PRO
+    site_name: PRObservatory
     images:
       - url: '~/assets/images/default.png'
         width: 1200
