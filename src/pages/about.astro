@@ -1,6 +1,7 @@
 ---
 import Features2 from '~/components/widgets/Features2.astro';
 import Features3 from '~/components/widgets/Features3.astro';
+import FeaturesWithMap from '~/components/widgets/FeaturesWithMap.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
@@ -225,4 +226,15 @@ const metadata = {
       },
     ]}
   />
+    
+  <FeaturesWithMap
+    title="Our Locations"
+    tagline="Find us here"
+    mapUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.9537353153167!3d-37.8162797797517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d8b1f4b0b1a!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1611816751234!5m2!1sen!2sau"
+  >
+    <Fragment slot="content">
+      wow this text really is like batman. jk. please fix this. go to FeaturesWithMap and make the font normal like how normal features does it. thanks.
+    </Fragment>
+  </FeaturesWithMap>
+
 </Layout>

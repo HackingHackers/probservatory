@@ -254,6 +254,21 @@ export interface Features extends Omit<Headline, 'classes'>, Widget {
   isAfterContent?: boolean;
 }
 
+export interface FeaturesWithMap extends Omit<Headline, 'classes'>, Widget {
+  title?: string;
+  subtitle?: string;
+  tagline?: string;
+  content?: string;
+  mapUrl: string;
+  id?: string;
+  isDark?: boolean;
+  classes?: {
+    container?: string;
+    headline?: Record<string, string>;
+  };
+  bg?: string;
+}
+
 export interface Faqs extends Omit<Headline, 'classes'>, Widget {
   iconUp?: string;
   iconDown?: string;
