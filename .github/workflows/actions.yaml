@@ -39,3 +39,4 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run check
+      - run: prettier --write src/pages/index.astro
