@@ -11,7 +11,7 @@ metadata:
   title:
     default: PRObservatory
     template: '%s — PRObservatory'
-  description: "\U0001F4E1 PRISMS Radio-Astronomy Observatory"
+  description: "\U0001F4E1 PRISMS Radio Astronomy Observatory"
   robots:
     index: true
     follow: true

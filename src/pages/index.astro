@@ -13,7 +13,7 @@ import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'PRISMS Radio-Astronomy Observatory',
+  title: 'PRISMS Radio Astronomy Observatory',
   ignoreTitleTemplate: true,
 };
 ---
@@ -32,13 +32,16 @@ const metadata = {
       },
       { text: 'Learn more', href: '#features' },
     ]}
-    image={{ src: '', alt: '- .... .- - .----. ... / --- -. . / ... -- .- .-.. .-.. / ... - . .--. / ..-. --- .-. / -- .- -. --..-- / --- -. . / --. .. .- -. - / .-.. . .- .--. / ..-. --- .-. / -- .- -. -.- .. -. -.. .-.-.-' }}
+    image={{
+      src: '',
+      alt: '- .... .- - .----. ... / --- -. . / ... -- .- .-.. .-.. / ... - . .--. / ..-. --- .-. / -- .- -. --..-- / --- -. . / --. .. .- -. - / .-.. . .- .--. / ..-. --- .-. / -- .- -. -.- .. -. -.. .-.-.-',
+    }}
   >
     <Fragment slot="title">
       <span class="hidden xl:inline">Welcome to </span>
       <br />
-      <span class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl underline">PRO</span>
-      <span class="text-accent dark:text-white text-4xl mt-3 block">PRISMS Radio-astronomical Observatory</span>
+      <span class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">PRObservatory</span>
+      <span class="text-accent dark:text-white text-4xl mt-3 block">PRISMS Radio Astronomy Observatory</span>
     </Fragment>
 
     <Fragment slot="subtitle">
