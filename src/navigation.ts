@@ -3,14 +3,6 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: 'Home',
-      href: getPermalink('/'),
-    },
-    {
-      text: 'Observe',
-      href: getPermalink('/observe'),
-    },
-    {
       text: 'Activities',
       href: getPermalink('/activites'),
     },
@@ -19,11 +11,36 @@ export const headerData = {
       href: getPermalink('/about'),
     },
     {
+      text: 'Blog',
+      links: [
+        {
+          text: 'Blog List',
+          href: getBlogPermalink(),
+        },
+        {
+          text: 'Article',
+          href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
+        },
+        {
+          text: 'Article (with MDX)',
+          href: getPermalink('markdown-elements-demo-post', 'post'),
+        },
+        {
+          text: 'Category Page',
+          href: getPermalink('tutorials', 'category'),
+        },
+        {
+          text: 'Tag Page',
+          href: getPermalink('astro', 'tag'),
+        },
+      ],
+    },
+    {
       text: 'Support',
       href: getPermalink('/support'),
     },
   ],
-  actions: [{ text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
+  actions: [{ text: 'Observe', href: getPermalink('/observe') }],
 };
 
 export const footerData = {
