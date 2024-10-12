@@ -15,8 +15,8 @@ export const headerData = {
       href: getBlogPermalink(),
     },
     {
-      text: 'Support',
-      href: getPermalink('/support'),
+      text: 'Donation',
+      href: getPermalink('/donation'),
     },
   ],
   actions: [{ text: 'Observe', href: getPermalink('/observe') }],
