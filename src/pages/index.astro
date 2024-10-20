@@ -13,6 +13,7 @@ import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import { getPermalink } from '~/utils/permalinks';
 // import CardComponents from '../components/CardComponents.astro';
+import { Image } from 'astro:assets';
 
 const metadata = {
   title: 'PRISMS Radio Astronomy Observatory',
@@ -86,10 +87,17 @@ const metadata = {
     ]}
 
     image={{
-      src: 'https://i.imgur.com/WT3VTh8.jpeg',
+      src: 'src/assets/images/infrontofdish.png',
       alt: 'Colorful Image',
     }}
-  >
+  > 
+
+  <Image
+    src="src/assets/images/infrontofdish.pngg"
+    alt="descriptive text"
+    width="200"
+    height="150"
+  />
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
         We serve as the source of opportunities for worldwide students who love astronomy.
@@ -101,6 +109,7 @@ const metadata = {
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Content>
+  
 
   <!-- Content Widget **************** -->
 
