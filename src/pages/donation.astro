@@ -6,6 +6,7 @@ import Hero from '~/components/widgets/Hero.astro';
 import Testimonials from '~/components/widgets/Testimonials.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
+
 const metadata = {
   title: 'Donation',
 };
@@ -16,22 +17,21 @@ const metadata = {
 
   <Hero
     tagline="Donation"
-    title="Use your treasure to support teenagers worldwide in their pursuit of astronomy"
+    title="Support Teenagers in their Pursuit of Astronomy"
     subtitle="We sincerely appreciate your generous support for PRO. Your contribution will help us provide more resources and research opportunities for students. For donation specifics, please contact us through emailing our school."
     actions={[
       { variant: 'primary', target: '_blank', text: 'Donate through email', href: 'mailto:finance@prismsus.org' },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+      src: "https://images.unsplash.com/photo-1729459370346-e9885cb35954?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       alt: 'AstroWind Hero Image',
     }}
   />
-
-  <!-- Features2 Widget ************** -->
+  
 
   <Features2
-    title="Explore our support website"
-    subtitle="Discover our selection below to streamline and elevate your projects."
+    title="Areas We Dedicate In"
+    subtitle="Discover our the wide range of opportunties for students."
     columns={3}
     items={[
       {
@@ -41,10 +41,10 @@ const metadata = {
         icon: 'tabler:school',
       },
       {
-        title: 'Interior Design',
+        title: 'Telescope Design',
         description:
           'Crafting functional, visually appealing spaces for residential and commercial use. Templates emphasize layout, colors, and furniture setups, offering a versatile toolkit for your design vision.',
-        icon: 'tabler:home-star',
+        icon: 'tabler:telescope',
       },
       {
         title: 'Photography',
@@ -52,10 +52,10 @@ const metadata = {
         icon: 'tabler:photo',
       },
       {
-        title: 'E-commerce',
+        title: 'Globally Share',
         description:
           'Developing engaging online stores, our E-commerce templates ensure a dynamic presence to effectively showcase products. Ideal for startups or revamps.',
-        icon: 'tabler:shopping-cart',
+        icon: 'tabler:network',
       },
       {
         title: 'Blog',
@@ -64,27 +64,10 @@ const metadata = {
         icon: 'tabler:article',
       },
       {
-        title: 'Business',
+        title: 'Research',
         description:
           'Providing polished options for effective visual communication, these templates empower both startups and established companies for a professional brand presence.',
-        icon: 'tabler:building-store',
-      },
-      {
-        title: 'Branding',
-        description:
-          'Offering pre-designed elements for a consistent brand identity, including logos and marketing materials. Ideal for new ventures or revamps.',
-        icon: 'tabler:arrow-big-up-lines',
-      },
-      {
-        title: 'Medical',
-        description: `From presentations to patient forms, these tools enhance communication effectiveness for healthcare professionals. Ideal for medical practices and research pursuits.`,
-        icon: 'tabler:vaccine',
-      },
-      {
-        title: 'Fashion Design',
-        description:
-          'With attention to detail, customization, and contemporary design, they empower designers to showcase ideas cohesively. Ideal for all levels of designers.',
-        icon: 'tabler:tie',
+        icon: 'tabler:books',
       },
     ]}
   />
@@ -176,7 +159,7 @@ const metadata = {
     testimonials={[
       {
         testimonial: `The designs are not only visually appealing but also highly professional. The templates have saved me a significant amount of time while helping me make a lasting impression on my clients.`,
-        name: 'Emily Kennedy',
+        name: 'Adam Kemp',
         job: 'Front-end developer',
         image: {
           src: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80',
@@ -185,7 +168,7 @@ const metadata = {
       },
       {
         testimonial: `It beautifully showcases my work, with its clean and elegant design that lets my photographs shine. Customization was a breeze, even for a non-tech person like me. The result is a professional and immersive portfolio that's garnered numerous compliments.`,
-        name: 'Sarah Hansen',
+        name: 'Taryl Kirk',
         job: 'Photographer',
         image: {
           src: 'https://images.unsplash.com/photo-1561406636-b80293969660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
@@ -194,7 +177,16 @@ const metadata = {
       },
       {
         testimonial: `I discovered these templates and I'm impressed by their variety and quality. They've helped me establish a consistent brand image across my marketing and social platforms, elevating my business's overall appearance.`,
-        name: 'Mark Wilkinson',
+        name: 'George Heim',
+        job: 'Small business owner',
+        image: {
+          src: 'https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=824&q=80',
+          alt: 'Mark Wilkinson Image',
+        },
+      },
+      {
+        testimonial: `I discovered these templates and I'm impressed by their variety and quality. They've helped me establish a consistent brand image across my marketing and social platforms, elevating my business's overall appearance.`,
+        name: 'Marilee Jones',
         job: 'Small business owner',
         image: {
           src: 'https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=824&q=80',
@@ -210,11 +202,11 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Start exploring',
-        href: '/',
+        text: 'Donate',
+        href: 'mailto:finance@prismsus.org',
       },
     ]}
-    title="Dive into our template collection"
-    subtitle="Whether you're in business, design, or education, our templates are here to elevate your projects."
+    title="Contribute to Astronomical Education."
+    subtitle="Donate to help students access valuable astronomical equipment and better prepare them for future research."
   />
 </Layout>
