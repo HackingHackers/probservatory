@@ -12,6 +12,8 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import { getPermalink } from '~/utils/permalinks';
+import RailStar from '~/assets/images/events/Light_Stack_170frames_Andromeda Gal_10sec_Bin1_19.0C_gain252_2024-10-11_214353.jpg'
+import GroupTelescope from '~/assets/images/infrontofdish.jpg'
 
 const metadata = {
   title: 'PRISMS Radio Astronomy Observatory',
@@ -82,7 +84,7 @@ const metadata = {
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1729439346982-471496aa7560?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      src: GroupTelescope,
       alt: 'Color image',
     }}
   >
@@ -99,7 +101,7 @@ const metadata = {
   </Content>
 
   <!-- Content Widget **************** -->
-
+  <!-- need a picture of telescopes here -->
   <Content
     isAfterContent
     tagline=""
@@ -220,9 +222,9 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Most used widgets"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS"
-    tagline="Components"
+    title="Activities"
+    subtitle="List of things we do to enjoy the stars."
+    tagline="Areas We Dedicate in"
     items={[
       {
         title: 'Headers',
@@ -285,15 +287,14 @@ const metadata = {
 
   <BlogLatestPosts
     title="Find out more content in our Blog"
-    information={`The blog is used to display AstroWind documentation.
-                        Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
-                        Astro is a very interesting technology. Thanks.
+    information={`See our activities at local Princeton and around the world in our blogs. We build, we observe, and we learn.
+                  You can also subscrbe our instagram for more information!
                 `}
   />
 
   <!-- FAQs Widget ******************* -->
 
-  <FAQs
+  <!-- <FAQs
     title="Frequently Asked Questions"
     subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
     tagline="FAQs"
@@ -330,16 +331,16 @@ const metadata = {
           "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
       },
     ]}
-  />
+  /> -->
 
   <!-- Stats Widget ****************** -->
 
   <Stats
     stats={[
-      { title: 'Downloads', amount: '132K' },
-      { title: 'Stars', amount: '24.8K' },
-      { title: 'Forks', amount: '10.3K' },
-      { title: 'Users', amount: '48.4K' },
+      { title: 'Group Members', amount: '14' },
+      { title: 'Celestial Body Observed', amount: '20' },
+      { title: 'Telescopes', amount: '3' },
+      { title: 'Astronomy Pictures', amount: '100+' },
     ]}
   />
 
