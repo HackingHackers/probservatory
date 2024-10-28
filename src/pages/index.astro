@@ -8,11 +8,11 @@ import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
+// import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import { getPermalink } from '~/utils/permalinks';
-import RailStar from '~/assets/images/events/Light_Stack_170frames_Andromeda Gal_10sec_Bin1_19.0C_gain252_2024-10-11_214353.jpg'
+// import RailStar from '~/assets/images/events/Light_Stack_170frames_Andromeda Gal_10sec_Bin1_19.0C_gain252_2024-10-11_214353.jpg'
 import GroupTelescope from '~/assets/images/infrontofdish.jpg'
 
 const metadata = {
@@ -140,82 +140,49 @@ const metadata = {
 
   <!-- Content Widget **************** -->
 
-  <Steps
-    isReversed
-    tagline="Get Involved"
-    title="Join the PRO Team"
-    items={[
-      {
-        title: 'Step 1: <span class="font-medium">Observe</span>',
-        description:
-          'Access PSRT (PRISMS Small Radio Telescope) through the observe tab of this website, and generate a beautiful image with specified data from the analyzer.',
-        icon: 'tabler:telescope',
-      },
-      {
-        title: 'Step 2: <span class="font-medium">Contact PRO</span>',
-        description:
-          'Send an email to your masterpiece and the observational parameters to PRO, and confirm that you are willing to share your observation result on the PRObservatory website.',
-        icon: 'tabler:mail',
-      },
-      {
-        title: 'Step 3: <span class="font-medium">See Your Result</span>',
-        description:
-          'Show people what you observed and tell them the significance of your observation. You are the future of astronomy!',
-        icon: 'tabler:eye',
-      },
-      {
-        title: 'You are now a part of PRO!',
-        icon: 'tabler:check',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1729439346982-471496aa7560?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      alt: 'Steps image',
-    }}
-  />
 
   <Features
     id="features"
-    tagline="What is PRO ?"
-    title="PRO's Imapct on local Community & World."
-    subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022."
+    tagline="What do we observe?"
+    title="Data + Analysis"
+    subtitle="The radio, optical, astronomical, environmental, atmospheric data that we observe, and why we observe them."
     items={[
       {
-        title: 'Astro + Tailwind CSS Integration',
+        title: 'Sun Radio Waves',
         description:
-          'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
-        icon: 'tabler:brand-tailwind',
+          'Monitoring wideband radiowave emitted by sun allows better understanding of solar activity.',
+        icon: 'tabler:sun-electricity',
       },
       {
-        title: 'Ready-to-use Components',
+        title: 'Remote Celestial Body Observation',
         description:
-          'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
-        icon: 'tabler:components',
+          'By cooperating with PRISMS photography club and visiting professional observatories, PRObservatory collect beautiful deep-sky pictures and analyze the celestial objects structures.',
+        icon: 'tabler:galaxy',
       },
       {
-        title: 'Best Practices',
+        title: 'RFI Monitor',
         description:
-          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
-        icon: 'tabler:list-check',
+          'Using the PRISMS Mini Radio Telescope, the team collects radio frequency interference data from spaces around the observatory for better radio telescope observation..',
+        icon: 'tabler:wave-saw-tool',
       },
       {
-        title: 'Excellent Page Speed',
+        title: 'Other Radio Observation',
         description:
-          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
-        icon: 'tabler:rocket',
+          'Using the big radio telescope, remote stars are being measured and further analysis is done to analyze their speed, direction of movement, component, and so on.',
+        icon: 'tabler:topology-star-ring',
       },
-      {
-        title: 'Search Engine Optimization (SEO)',
-        description:
-          "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
-        icon: 'tabler:arrows-right-left',
-      },
-      {
-        title: 'Open to new ideas and contributions',
-        description:
-          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
-        icon: 'tabler:bulb',
-      },
+      // {
+      //   title: 'Search Engine Optimization (SEO)',
+      //   description:
+      //     "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
+      //   icon: 'tabler:arrows-right-left',
+      // },
+      // {
+      //   title: 'Open to new ideas and contributions',
+      //   description:
+      //     'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
+      //   icon: 'tabler:bulb',
+      // },
     ]}
   />
 
@@ -223,13 +190,13 @@ const metadata = {
 
   <Features2
     title="Activities"
-    subtitle="List of things we do to enjoy the stars."
-    tagline="Areas We Dedicate in"
+    subtitle="List of things we do to see, study, and share the stars."
+    tagline="What to enjoy with PRO"
     items={[
       {
-        title: 'Headers',
-        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
-        icon: 'flat-color-icons:template',
+        title: 'Lectures',
+        description: "Lecture series from different famous astronomy and astrophysics researchers.",
+        icon: 'flat-color-icons:gallery',
       },
       {
         title: 'Heros',
@@ -366,4 +333,40 @@ const metadata = {
       waste more time! :P
     </Fragment>
   </CallToAction>
+
+  <Steps
+    isReversed
+    tagline="Get Involved"
+    title="Join the PRO Team"
+    items={[
+      {
+        title: 'Step 1: <span class="font-medium">Observe</span>',
+        description:
+          'Access PSRT (PRISMS Small Radio Telescope) through the observe tab of this website, and generate a beautiful image with specified data from the analyzer.',
+        icon: 'tabler:telescope',
+      },
+      {
+        title: 'Step 2: <span class="font-medium">Contact PRO</span>',
+        description:
+          'Send an email to your masterpiece and the observational parameters to PRO, and confirm that you are willing to share your observation result on the PRObservatory website.',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Step 3: <span class="font-medium">See Your Result</span>',
+        description:
+          'Show people what you observed and tell them the significance of your observation. You are the future of astronomy!',
+        icon: 'tabler:eye',
+      },
+      {
+        title: 'You are now a part of PRO!',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1729439346982-471496aa7560?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      alt: 'Steps image',
+    }}
+  />
+
+
 </Layout>
