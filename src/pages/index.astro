@@ -13,8 +13,8 @@ import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import { getPermalink } from '~/utils/permalinks';
 // import RailStar from '~/assets/images/events/Light_Stack_170frames_Andromeda Gal_10sec_Bin1_19.0C_gain252_2024-10-11_214353.jpg'
-import GroupTelescope from '~/assets/images/infrontofdish.jpg'
-import Group_pict from '~/assets/images/group_pic/DSC_7091.jpeg'
+import GroupTelescope from '~/assets/images/infrontofdish.jpg';
+import Group_pict from '~/assets/images/group_pic/DSC_7091.jpeg';
 
 const metadata = {
   title: 'PRISMS Radio Astronomy Observatory',
@@ -49,7 +49,9 @@ const metadata = {
       </span> -->
       <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span>
       <span class="font-semibold text-white">PRO</span>
-      <span class="text-white">is a student ran observatory aiming to improve high schoolers' access to cutting-edge equipments.</span>
+      <span class="text-white"
+        >is a student ran observatory aiming to improve high schoolers' access to cutting-edge equipments.</span
+      >
       <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span>
       <span class="text-white">Click observe to make observation on PSRT.</span>
     </Fragment>
@@ -141,7 +143,6 @@ const metadata = {
 
   <!-- Content Widget **************** -->
 
-
   <Features
     id="features"
     tagline="What do we observe?"
@@ -150,8 +151,7 @@ const metadata = {
     items={[
       {
         title: 'Sun Radio Waves',
-        description:
-          'Monitoring wideband radiowave emitted by sun allows better understanding of solar activity.',
+        description: 'Monitoring wideband radiowave emitted by sun allows better understanding of solar activity.',
         icon: 'tabler:sun-electricity',
       },
       {
@@ -280,12 +280,10 @@ const metadata = {
       },
     ]}
     image={{
-      src:  Group_pict.src,
+      src: Group_pict.src,
       alt: 'Steps image',
     }}
   />
-
-
 
   <!-- HighlightedPosts Widget ******* -->
 
@@ -366,10 +364,9 @@ const metadata = {
     </Fragment>
 
     <Fragment slot="subtitle">
-      Conduct your observation with the great tool following your thoughts and methods of exploring the universe. <br class="hidden md:inline" />Don't
-      waste more time! :P
+      Conduct your observation with the great tool following your thoughts and methods of exploring the universe. <br
+        class="hidden md:inline"
+      />Don't waste more time! :P
     </Fragment>
   </CallToAction>
-
-  
 </Layout>
