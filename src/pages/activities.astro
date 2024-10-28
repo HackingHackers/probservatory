@@ -11,7 +11,9 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
-import Activit_pic from '~/assets/images/events/activity_group.jpg'
+import Activit_pic from '~/assets/images/events/activity_group.jpg';
+import { getPermalink } from '~/utils/permalinks';
+
 
 const metadata = {
   title: 'PRISMS Radio Astronomy Observatory',
@@ -27,7 +29,7 @@ const metadata = {
       {
         variant: 'primary',
         text: 'Observe',
-        href: 'https://github.com/onwidget/astrowind',
+        href: getPermalink('/observe'),
         target: '_blank',
         icon: 'tabler:telescope',
       },

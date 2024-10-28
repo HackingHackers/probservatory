@@ -4,7 +4,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
+// import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
@@ -14,6 +14,7 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 import { getPermalink } from '~/utils/permalinks';
 // import RailStar from '~/assets/images/events/Light_Stack_170frames_Andromeda Gal_10sec_Bin1_19.0C_gain252_2024-10-11_214353.jpg'
 import GroupTelescope from '~/assets/images/infrontofdish.jpg'
+import Group_pict from '~/assets/images/group_pic/DSC_7091.jpg'
 
 const metadata = {
   title: 'PRISMS Radio Astronomy Observatory',
@@ -104,7 +105,7 @@ const metadata = {
   <!-- need a picture of telescopes here -->
   <Content
     isAfterContent
-    tagline=""
+    tagline="We Collect Cameras and Telescopes"
     title="Facilities"
     items={[
       {
@@ -188,7 +189,7 @@ const metadata = {
 
   <!-- Features2 Widget ************** -->
 
-  <Features2
+  <!-- <Features2
     title="Activities"
     subtitle="List of things we do to see, study, and share the stars."
     tagline="What to enjoy with PRO"
@@ -248,7 +249,7 @@ const metadata = {
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </Features2>
+  </Features2> -->
 
   <Steps
     isReversed
@@ -279,7 +280,7 @@ const metadata = {
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1729439346982-471496aa7560?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      src:  Group_pict.src,
       alt: 'Steps image',
     }}
   />
