@@ -250,6 +250,42 @@ const metadata = {
     </Fragment>
   </Features2>
 
+  <Steps
+    isReversed
+    tagline="Get Involved"
+    title="Join the PRO Team"
+    items={[
+      {
+        title: 'Step 1: <span class="font-medium">Observe</span>',
+        description:
+          'Access PSRT (PRISMS Small Radio Telescope) through the observe tab of this website, and generate a beautiful image with specified data from the analyzer.',
+        icon: 'tabler:telescope',
+      },
+      {
+        title: 'Step 2: <span class="font-medium">Contact PRO</span>',
+        description:
+          'Send an email to your masterpiece and the observational parameters to PRO, and confirm that you are willing to share your observation result on the PRObservatory website.',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Step 3: <span class="font-medium">See Your Result</span>',
+        description:
+          'Show people what you observed and tell them the significance of your observation. You are the future of astronomy!',
+        icon: 'tabler:eye',
+      },
+      {
+        title: 'You are now a part of PRO!',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1729439346982-471496aa7560?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      alt: 'Steps image',
+    }}
+  />
+
+
+
   <!-- HighlightedPosts Widget ******* -->
 
   <BlogLatestPosts
@@ -334,39 +370,5 @@ const metadata = {
     </Fragment>
   </CallToAction>
 
-  <Steps
-    isReversed
-    tagline="Get Involved"
-    title="Join the PRO Team"
-    items={[
-      {
-        title: 'Step 1: <span class="font-medium">Observe</span>',
-        description:
-          'Access PSRT (PRISMS Small Radio Telescope) through the observe tab of this website, and generate a beautiful image with specified data from the analyzer.',
-        icon: 'tabler:telescope',
-      },
-      {
-        title: 'Step 2: <span class="font-medium">Contact PRO</span>',
-        description:
-          'Send an email to your masterpiece and the observational parameters to PRO, and confirm that you are willing to share your observation result on the PRObservatory website.',
-        icon: 'tabler:mail',
-      },
-      {
-        title: 'Step 3: <span class="font-medium">See Your Result</span>',
-        description:
-          'Show people what you observed and tell them the significance of your observation. You are the future of astronomy!',
-        icon: 'tabler:eye',
-      },
-      {
-        title: 'You are now a part of PRO!',
-        icon: 'tabler:check',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1729439346982-471496aa7560?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      alt: 'Steps image',
-    }}
-  />
-
-
+  
 </Layout>

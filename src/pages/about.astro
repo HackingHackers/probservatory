@@ -7,6 +7,12 @@ import Stats from '~/components/widgets/Stats.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
 import StarRail from '~/assets/images/probservatory/Faik Akmd.webp';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Adam_kemp from '~/assets/images/adam_kemp (1).jpg'
+import George_heim from '~/assets/images/george.heim.jpg'
+import Taryl_kirk from '~/assets/images/taryl_kirk.jpg'
+// import Astro_constellation from '~/assets/images/events/Light_Stack_170frames_Andromeda Gal_10sec_Bin1_19.0C_gain252_2024-10-11_214353.jpg'
+
 
 const metadata = {
   title: 'About us',
@@ -24,14 +30,12 @@ const metadata = {
     }}
   >
     <Fragment slot="title">
-      Elevate your online presence with our <br />
-      <span class="text-accent dark:text-white highlight"> Beautiful Website Templates</span>
+      Develop Deeper understanding of the Universe With Probservatory<br />
+      <span class="text-accent dark:text-white highlight"> </span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Donec efficitur, ipsum quis congue luctus, mauris magna convallis mauris, eu auctor nisi lectus non augue. Donec
-      quis lorem non massa vulputate efficitur ac at turpis. Sed tincidunt ex a nunc convallis, et lobortis nisi tempus.
-      Suspendisse vitae nisi eget tortor luctus maximus sed non lectus.
+      <p>Our goal is to help worldwide students reach deep into the sky and provide a good astrophysics research platform for different level amatuer astronomical students.</p>
     </Fragment>
   </Hero>
 
@@ -40,10 +44,10 @@ const metadata = {
   <Stats
     title="Statistics about us"
     stats={[
-      { title: 'Offices', amount: '4' },
-      { title: 'Employees', amount: '248' },
-      { title: 'Templates', amount: '12' },
-      { title: 'Awards', amount: '24' },
+      { title: 'Projects', amount: '4' },
+      { title: 'Group Members', amount: '15' },
+      { title: 'Linking Observatories', amount: '3' },
+      { title: 'Astronomy Pictures', amount: '120+' },
     ]}
   />
 
@@ -180,9 +184,78 @@ const metadata = {
     ]}
   />
 
+  <Testimonials
+    title="Words from Our Mentors & Members"
+    testimonials={[
+      {
+        testimonial: `The designs are not only visually appealing but also highly professional. The templates have saved me a significant amount of time while helping me make a lasting impression on my clients.`,
+        name: 'Adam Kemp',
+        job: 'Head of Engineering Department',
+        image: {
+          src:  Adam_kemp,
+          alt: 'Emily Kennedy Image',
+        },
+      },
+      {
+        testimonial: `It beautifully showcases my work, with its clean and elegant design that lets my photographs shine. Customization was a breeze, even for a non-tech person like me. The result is a professional and immersive portfolio that's garnered numerous compliments.`,
+        name: 'Taryl Kirk',
+        job: 'Head of Physics Department',
+        image: {
+          src: Taryl_kirk,
+          alt: 'Sarah Hansen Image',
+        },
+      },
+      {
+        testimonial: `I discovered these templates and I'm impressed by their variety and quality. They've helped me establish a consistent brand image across my marketing and social platforms, elevating my business's overall appearance.`,
+        name: 'George Heim',
+        job: 'Head of Applied Physics Lab',
+        image: {
+          src: George_heim,
+          alt: 'Mark Wilkinson Image',
+        },
+      },
+      {
+        testimonial: `The designs are not only visually appealing but also highly professional. The templates have saved me a significant amount of time while helping me make a lasting impression on my clients.`,
+        name: 'Adam Kemp',
+        job: 'Head of Engineering Department',
+        image: {
+          src:  Adam_kemp,
+          alt: 'Emily Kennedy Image',
+        },
+      },
+      {
+        testimonial: `It beautifully showcases my work, with its clean and elegant design that lets my photographs shine. Customization was a breeze, even for a non-tech person like me. The result is a professional and immersive portfolio that's garnered numerous compliments.`,
+        name: 'Taryl Kirk',
+        job: 'Head of Physics Department',
+        image: {
+          src: Taryl_kirk,
+          alt: 'Sarah Hansen Image',
+        },
+      },
+      {
+        testimonial: `I discovered these templates and I'm impressed by their variety and quality. They've helped me establish a consistent brand image across my marketing and social platforms, elevating my business's overall appearance.`,
+        name: 'George Heim',
+        job: 'Head of Applied Physics Lab',
+        image: {
+          src: George_heim,
+          alt: 'Mark Wilkinson Image',
+        },
+      },
+      // {
+      //   testimonial: `I discovered these templates and I'm impressed by their variety and quality. They've helped me establish a consistent brand image across my marketing and social platforms, elevating my business's overall appearance.`,
+      //   name: 'Marilee Jones',
+      //   job: 'Small business owner',
+      //   image: {
+      //     src: 'https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=824&q=80',
+      //     alt: 'Mark Wilkinson Image',
+      //   },
+      // },
+    ]}
+  />
+
   <!-- Features2 Widget ************** -->
 
-  <Features2
+  <!-- <Features2
     title="Our locations"
     tagline="Find us"
     columns={4}
@@ -204,26 +277,26 @@ const metadata = {
         description: '3456 Lorem Ipsum St, 34567, São Paulo',
       },
     ]}
-  />
+  /> -->
 
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Technical Support"
+    title="Reach Out for More Information or Collaboration"
     tagline="Contact us"
     columns={2}
     items={[
       {
-        title: 'Chat with us',
+        title: 'Email us',
         description:
-          'Integer luctus laoreet libero, auctor varius purus rutrum sit amet. Ut nec molestie nisi, quis eleifend mi.',
-        icon: 'tabler:messages',
+          'Contact us through emailing us at "prisms.telescope@gmail.com" for more data or collaboration.',
+        icon: 'tabler:mail-spark',
       },
       {
-        title: 'Call us',
+        title: 'Visit us',
         description:
-          'Mauris faucibus finibus orci, in posuere elit viverra non. In hac habitasse platea dictumst. Cras lobortis metus a hendrerit congue.',
-        icon: 'tabler:headset',
+          'Submit a visiting request with special specification at "prisms.telescope@gmail.com" as well.',
+        icon: 'tabler:map-2',
       },
     ]}
   />
@@ -231,7 +304,7 @@ const metadata = {
   <FeaturesWithMap
     title="Our Locations"
     tagline="Find us here"
-    mapUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.9537353153167!3d-37.8162797797517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d8b1f4b0b1a!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1611816751234!5m2!1sen!2sau"
+    mapUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3041.0132551743413!2d-74.6994923239142!3d40.34205196018109!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3e4066d9e5601%3A0xf1b5ed9615284b82!2s19%20Lambert%20Dr%2C%20Princeton%2C%20NJ%2008540%2C%20USA!5e0!3m2!1sen!2sau!4v1730120212002!5m2!1sen!2sau"
   >
     <Fragment slot="content">
       wow this text really is like batman. jk. please fix this. go to FeaturesWithMap and make the font normal like how

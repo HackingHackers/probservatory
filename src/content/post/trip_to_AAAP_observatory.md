@@ -12,7 +12,7 @@ metadata:
   canonical: https://astrowind.vercel.app/october-trip-to-AAAP-observatory
 ---
 
-Stars are the lanturns in the sky. They are the wishes of our ancestors, as well as the call of happiness.
+Stars are the lanterns in the sky. They are the wishes from our ancestors, as well as the calls for happiness.
 
 ## Evening trip to AAAP Observatory
 
