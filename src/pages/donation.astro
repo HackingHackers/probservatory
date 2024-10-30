@@ -5,6 +5,9 @@ import Features2 from '~/components/widgets/Features2.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Testimonials from '~/components/widgets/Testimonials.astro';
 import Layout from '~/layouts/PageLayout.astro';
+import Kirk from '~/assets/images/taryl_kirk.jpg'
+import Kemp from '~/assets/images/adam_kemp (1).jpg'
+import Heim from '~/assets/images/george.heim.jpg'
 const metadata = {
   title: 'Donation',
 };
@@ -32,38 +35,38 @@ const metadata = {
     columns={3}
     items={[
       {
-        title: 'Educational',
+        title: 'Education',
         description:
-          'By harmonizing instructional design and visual appeal, templates streamline content creation for varied materials, expediting development and cultivating engaging educational spaces.',
+          'Through providing hand on observation with theory discussions, astronomy is being taught in a interesting way.',
         icon: 'tabler:school',
       },
       {
         title: 'Telescope Design',
         description:
-          'Crafting functional, visually appealing spaces for residential and commercial use. Templates emphasize layout, colors, and furniture setups, offering a versatile toolkit for your design vision.',
+          'While serving as a facility improvement for the club and research group, engineering and physics knowledge is being practiced during the time.',
         icon: 'tabler:telescope',
       },
       {
         title: 'Photography',
-        description: `Empowering photographers, our templates facilitate captivating storytelling. With a keen focus on layout, galleries, and typography, they cater to both professionals and enthusiasts.`,
+        description: `Morning, evening, midnight, and all the other times, we gather and collect beautiful pictures in local Princeton area.`,
         icon: 'tabler:photo',
       },
       {
-        title: 'Globally Share',
+        title: 'Global Share',
         description:
-          'Developing engaging online stores, our E-commerce templates ensure a dynamic presence to effectively showcase products. Ideal for startups or revamps.',
+          'We share our data and experience on our website and instagram to show people the beauty of the universe.',
         icon: 'tabler:network',
       },
       {
         title: 'Blog',
         description:
-          'With attention to typography, these templates empower effective content presentation for writers at any stage, ensuring visually engaging and user-friendly blogs.',
+          'Using the most beautiful language to describe the stars we beloved, junior astronomers collect memories, condense, and share them in the blogs.',
         icon: 'tabler:article',
       },
       {
         title: 'Research',
         description:
-          'Providing polished options for effective visual communication, these templates empower both startups and established companies for a professional brand presence.',
+          'While embrace the pretty life, we study the universe with our equipments.',
         icon: 'tabler:books',
       },
     ]}
@@ -152,33 +155,33 @@ const metadata = {
   <!-- Testimonials Widget *********** -->
 
   <Testimonials
-    title="Words from Astronomers"
+    title="Words from Our Teachers"
     testimonials={[
       {
         testimonial: `The designs are not only visually appealing but also highly professional. The templates have saved me a significant amount of time while helping me make a lasting impression on my clients.`,
         name: 'Adam Kemp',
-        job: 'Front-end developer',
+        job: 'Head of Engineering Department',
         image: {
-          src: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80',
-          alt: 'Emily Kennedy Image',
+          src:  Kemp,
+          alt: 'Mr. Adam Kemp',
         },
       },
       {
         testimonial: `It beautifully showcases my work, with its clean and elegant design that lets my photographs shine. Customization was a breeze, even for a non-tech person like me. The result is a professional and immersive portfolio that's garnered numerous compliments.`,
         name: 'Taryl Kirk',
-        job: 'Photographer',
+        job: 'Head of Physics Department',
         image: {
-          src: 'https://images.unsplash.com/photo-1561406636-b80293969660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-          alt: 'Sarah Hansen Image',
+          src:  Kirk,
+          alt: 'Dr. Taryl Kirk',
         },
       },
       {
         testimonial: `I discovered these templates and I'm impressed by their variety and quality. They've helped me establish a consistent brand image across my marketing and social platforms, elevating my business's overall appearance.`,
         name: 'George Heim',
-        job: 'Small business owner',
+        job: 'Head of Applied Physics Lab',
         image: {
-          src: 'https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=824&q=80',
-          alt: 'Mark Wilkinson Image',
+          src:  Heim,
+          alt: 'Mr. George Heim',
         },
       },
       // {

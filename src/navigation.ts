@@ -2,14 +2,22 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 
 export const headerData = {
   links: [
+    // {
+    //   text: 'Activities',
+    //   href: getPermalink('/activities'),
+    // },
     {
-      text: 'Activities',
-      href: getPermalink('/activities'),
+      text: 'Home',
+      href: getPermalink('/'),
     },
     {
-      text: 'About',
-      href: getPermalink('/about'),
+      text: 'Observe',
+      href: getPermalink('/observe'),
     },
+    // {
+    //   text: 'About',
+    //   href: getPermalink('/about'),
+    // },
     {
       text: 'Blog',
       href: getBlogPermalink(),
