@@ -3,10 +3,26 @@ import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
 import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
+// import { useState } from 'react';
 
 const metadata = {
   title: 'Observe',
 };
+
+// const min = 1;
+// const max = 100;
+
+// function handleSubmit(event) {
+//   event.preventDefault();
+//   const form = event.target;
+//   const value = parseInt(form.elements['numberInput'].value, 10);
+
+//   if (value < min || value > max) {
+//     alert(`Value must be between ${min} and ${max}.`);
+//   } else {
+//     alert('Form submitted successfully!');
+//   }
+// }
 ---
 
 <Layout metadata={metadata}>
@@ -30,6 +46,44 @@ const metadata = {
     >.
   </div>
 
+<!-- HTML Form Structure
+<form id="rangeValidationForm">
+  <label for="numberInput">Enter a number:</label>
+  <input type="number" id="numberInput" name="numberInput" required />
+  <button type="submit">Submit</button>
+</form>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('rangeValidationForm');
+    
+    if (form) {
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const input = document.getElementById('numberInput');
+        
+        if (input) {
+          // Ensure the input value is treated as a number
+          const value = parseInt(input.value, 10);
+
+          // Check if the value is a valid number and within the specified range
+          if (isNaN(value) || value < min || value > {{ max }}) {
+            alert(`Please enter a number between ${min} and ${max}.`);
+          } else {
+            alert('Form submitted successfully!');
+          }
+        } else {
+          console.error("Input element with ID 'numberInput' was not found.");
+        }
+      });
+    } else {
+      console.error("Form element with ID 'rangeValidationForm' was not found.");
+    }
+  });
+</script> -->
+<!-- Explanation -->
+
   <ContactUs
     id="form"
     title="Control the PRISMS Small Radio Telescope"
@@ -44,6 +98,7 @@ const metadata = {
         type: 'number',
         name: 'frequency',
         label: 'Central Frequency (MHz)',
+        
       },
       {
         type: 'number',
@@ -78,6 +133,30 @@ const metadata = {
       label: 'Message',
     }} -->
   <!-- Features2 Widget ************** -->
+
+  <!-- <form id={handleSubmit}>
+    <label for="numberInput">Enter a number:</label>
+    <input type="number" id="numberInput" name="numberInput" required />
+    <button type="submit">Submit</button>
+  </form>
+  
+  <script>
+    // JavaScript for form validation
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('validationForm').addEventListener('submit', (event) => {
+        event.preventDefault();
+        const input = document.getElementById('numberInput');
+        const value = parseInt(input.value, 10);
+  
+        if (isNaN(value) || value < {{ min }} || value > {{ max }}) {
+          alert(`Value must be between ${min} and ${max}.`);
+        } else {
+          alert('Form submitted successfully!');
+          // Optionally, submit the form programmatically or perform further actions.
+        }
+      });
+    });
+  </script> -->
 
   <Features2
     title="We are here to help!"
