@@ -17,8 +17,22 @@ export function validateForm(event) {
     valid = false;
   }
 
+  // Validate the "email" input
+  const emailInput = document.getElementById('email');
+  const emailValue = emailInput.value.trim();
+
+  function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+
+  if (!isValidEmail(emailValue)) {
+    document.getElementById('email-error').classList.remove('hidden');
+    valid = false;
+  }
+
   // Validate other required inputs in the form
-  const inputs = document.querySelectorAll('#contactForm input[required]:not(#numberChoice)');
+  const inputs = document.querySelectorAll('#contactForm input[required]:not(#numberChoice):not(#email)');
   inputs.forEach((input) => {
     if (!input.value.trim()) {
       document.getElementById(`${input.name}-error`).classList.remove('hidden');
@@ -43,5 +57,9 @@ export function validateForm(event) {
   // Submit the form if all validations pass
   if (valid) {
     document.getElementById('contactForm').submit();
+    console.log("valid");
+  } else {
+    console.log("not valid");
   }
+  return valid;
 }

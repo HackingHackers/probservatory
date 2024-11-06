@@ -1,7 +1,6 @@
 ---
 import type { Form as Props } from '~/types';
 import Button from '~/components/ui/Button.astro';
-// import { validateForm } from '~/validateForm.js'
 
 const { inputs, textarea, disclaimer, button = 'Submit', description = '' } = Astro.props;
 ---
@@ -51,6 +50,21 @@ const { inputs, textarea, disclaimer, button = 'Submit', description = '' } = As
     />
     <p id="numberChoice-error" class="text-red-500 text-sm mt-1 hidden">
       Please select a number in increments of 100 from 100 to 900.
+    </p>
+  </div>
+
+  <div class="mb-6">
+    <label for="email" class="block text-sm font-medium"> Email </label>
+    <input
+      type="text"
+      id="email"
+      name="email"
+      required
+      placeholder="Please type your email address here."
+      class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+    />
+    <p id="email" class="text-red-500 text-sm mt-1 hidden">
+      Please type your email address here.
     </p>
   </div>
 
@@ -119,6 +133,6 @@ const { inputs, textarea, disclaimer, button = 'Submit', description = '' } = As
 
 <!-- Inline Script to Bind validateForm Function -->
 <script type="module" is:inline>
-  import { validateForm } from '~/validateForm.js';
+  import { validateForm } from '/validateForm.js';
   document.getElementById('contactForm').addEventListener('submit', validateForm);
 </script>
