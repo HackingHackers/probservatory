@@ -5,9 +5,9 @@ excerpt: We take the beautiful pictures in the field under a silent night. The m
 image: ~/assets/images/2024-09-14-0132_7-Moon_0013.PNG
 tags:
   - astro
-  - tailwind css
+  - tailwind css 
   - theme
-metadata:
+metadata: 
   canonical: https://astrowind.vercel.app/how-to-customize-astrowind-to-your-brand
 ---
 

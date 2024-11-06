@@ -3,8 +3,8 @@ publishDate: 2024-10-23T00:00:00Z
 title: 'Observation trip of the Tsuchinshan-Atlas near School'
 excerpt: We gathered on the outside of the school. On the beautiful grassland we all saw the million year visitor who last for a short time and leave us again. Romance and Science cross at the moment!
 image: ~/assets/images/WechatIMG33.png
-tags:
-  - landing-pages
+tags: 
+  - landing-pages 
   - front-end
   - resources
 metadata:
