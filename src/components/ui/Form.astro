@@ -10,7 +10,7 @@ const { inputs, textarea, disclaimer, button = 'Submit', description = '' } = As
   {
     inputs &&
       inputs.map(
-        ({ type = 'text', name, label = '', autocomplete = 'on', placeholder = '', required = false }) =>
+        ({ type = 'text', name, label = '', autocomplete = 'on', placeholder = '', required  = false }) =>
           name && (
             <div class="mb-6">
               {label && (
