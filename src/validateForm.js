@@ -1,10 +1,11 @@
 // src/validateForm.js
+
 export function validateForm(event) {
   event.preventDefault(); // Prevent form submission to run validation first
 
   // Clear any existing error messages
   const errorElements = document.querySelectorAll('.text-red-500');
-  errorElements.forEach(el => el.classList.add('hidden'));
+  errorElements.forEach((el) => el.classList.add('hidden'));
 
   let valid = true;
 
@@ -18,7 +19,7 @@ export function validateForm(event) {
 
   // Validate other required inputs in the form
   const inputs = document.querySelectorAll('#contactForm input[required]:not(#numberChoice)');
-  inputs.forEach(input => {
+  inputs.forEach((input) => {
     if (!input.value.trim()) {
       document.getElementById(`${input.name}-error`).classList.remove('hidden');
       valid = false;

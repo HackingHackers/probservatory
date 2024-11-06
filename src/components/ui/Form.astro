@@ -1,7 +1,7 @@
 ---
 import type { Form as Props } from '~/types';
 import Button from '~/components/ui/Button.astro';
-import { validateForm } from '~/validateForm.js'
+// import { validateForm } from '~/validateForm.js'
 
 const { inputs, textarea, disclaimer, button = 'Submit', description = '' } = Astro.props;
 ---
@@ -10,7 +10,7 @@ const { inputs, textarea, disclaimer, button = 'Submit', description = '' } = As
   {
     inputs &&
       inputs.map(
-        ({ type = 'text', name, label = '', autocomplete = 'on', placeholder = '', required  = false }) =>
+        ({ type = 'text', name, label = '', autocomplete = 'on', placeholder = '', required = false }) =>
           name && (
             <div class="mb-6">
               {label && (
@@ -25,32 +25,34 @@ const { inputs, textarea, disclaimer, button = 'Submit', description = '' } = As
                 autocomplete={autocomplete}
                 placeholder={placeholder}
                 class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
-                required = {required}
+                required={required}
               />
-              <p id={'${name}-error'} class="text-red-500 text-sm mt-1 hidden">Please enter a valid {label.toLowerCase()}.</p>
+              <p id={'${name}-error'} class="text-red-500 text-sm mt-1 hidden">
+                Please enter a valid {label.toLowerCase()}.
+              </p>
             </div>
           )
       )
   }
 
-<!-- Adding a number input that only allows values from 100 to 900 in steps of 100 -->
-<div class="mb-6">
-  <label for="numberChoice" class="block text-sm font-medium">
-    Choose a Number (100-900, increments of 100) *
-  </label>
-  <input
-    type="number"
-    id="numberChoice"
-    name="numberChoice"
-    min="100"
-    max="900"
-    step="100"
-    required
-    placeholder="Choose a number (100, 200, ... 900)"
-    class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
-  />
-  <p id="numberChoice-error" class="text-red-500 text-sm mt-1 hidden">Please select a number in increments of 100 from 100 to 900.</p>
-</div>
+  <!-- Adding a number input that only allows values from 100 to 900 in steps of 100 -->
+  <div class="mb-6">
+    <label for="numberChoice" class="block text-sm font-medium"> Choose a Number (100-900, increments of 100) * </label>
+    <input
+      type="number"
+      id="numberChoice"
+      name="numberChoice"
+      min="100"
+      max="900"
+      step="100"
+      required
+      placeholder="Choose a number (100, 200, ... 900)"
+      class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+    />
+    <p id="numberChoice-error" class="text-red-500 text-sm mt-1 hidden">
+      Please select a number in increments of 100 from 100 to 900.
+    </p>
+  </div>
 
   {
     textarea && (
@@ -65,7 +67,9 @@ const { inputs, textarea, disclaimer, button = 'Submit', description = '' } = As
           placeholder={textarea.placeholder}
           class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
         />
-        <p id="textarea-error" class="text-red-500 text-sm mt-1 hidden">Please enter a valid message.</p>
+        <p id="textarea-error" class="text-red-500 text-sm mt-1 hidden">
+          Please enter a valid message.
+        </p>
       </div>
     )
   }
@@ -86,7 +90,9 @@ const { inputs, textarea, disclaimer, button = 'Submit', description = '' } = As
           <label for="disclaimer" class="cursor-pointer select-none text-sm text-gray-600 dark:text-gray-400">
             {disclaimer.label}
           </label>
-          <p id="disclaimer-error" class="text-red-500 text-sm mt-1 hidden">Please agree to the disclaimer.</p>
+          <p id="disclaimer-error" class="text-red-500 text-sm mt-1 hidden">
+            Please agree to the disclaimer.
+          </p>
         </div>
       </div>
     )
@@ -112,7 +118,7 @@ const { inputs, textarea, disclaimer, button = 'Submit', description = '' } = As
 </form>
 
 <!-- Inline Script to Bind validateForm Function -->
-<script type="module">
+<script type="module" is:inline>
   import { validateForm } from '~/validateForm.js';
   document.getElementById('contactForm').addEventListener('submit', validateForm);
 </script>
