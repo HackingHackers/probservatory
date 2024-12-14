@@ -57,9 +57,9 @@ export function validateForm(event) {
   // Submit the form if all validations pass
   if (valid) {
     document.getElementById('contactForm').submit();
-    console.log("valid");
+    console.log('valid');
   } else {
-    console.log("not valid");
+    console.log('not valid');
   }
   return valid;
 }
