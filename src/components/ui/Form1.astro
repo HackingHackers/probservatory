@@ -1,4 +1,5 @@
 ---
+
 ---
 
 <!-- HTML Form -->
@@ -19,17 +20,17 @@
 
 <!-- Script for Form Validation and Firebase Submission -->
 <script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
-  import { getFirestore, addDoc, collection } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js";
+  import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js';
+  import { getFirestore, addDoc, collection } from 'https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js';
 
   // Firebase Configuration
   const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_AUTH_DOMAIN",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_STORAGE_BUCKET",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId: "YOUR_APP_ID"
+    apiKey: 'YOUR_API_KEY',
+    authDomain: 'YOUR_AUTH_DOMAIN',
+    projectId: 'YOUR_PROJECT_ID',
+    storageBucket: 'YOUR_STORAGE_BUCKET',
+    messagingSenderId: 'YOUR_MESSAGING_SENDER_ID',
+    appId: 'YOUR_APP_ID',
   };
 
   // Initialize Firebase
@@ -37,11 +38,11 @@
   const db = getFirestore(app);
 
   // Form Submission Handling
-  document.addEventListener("DOMContentLoaded", () => {
-    const form = document.getElementById("contactForm");
-    const feedback = document.getElementById("formFeedback");
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contactForm');
+    const feedback = document.getElementById('formFeedback');
 
-    form.addEventListener("submit", async (event) => {
+    form.addEventListener('submit', async (event) => {
       event.preventDefault(); // Prevent default form submission
 
       // Validate inputs
@@ -50,35 +51,35 @@
       const message = form.message.value.trim();
 
       if (!name || !email || !message) {
-        feedback.textContent = "Please fill in all fields.";
-        feedback.style.color = "red";
+        feedback.textContent = 'Please fill in all fields.';
+        feedback.style.color = 'red';
         return;
       }
 
       // Email validation
       const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailPattern.test(email)) {
-        feedback.textContent = "Please enter a valid email address.";
-        feedback.style.color = "red";
+        feedback.textContent = 'Please enter a valid email address.';
+        feedback.style.color = 'red';
         return;
       }
 
       try {
         // Add form data to Firebase Firestore
-        await addDoc(collection(db, "contactForms"), {
+        await addDoc(collection(db, 'contactForms'), {
           name,
           email,
           message,
-          timestamp: new Date()
+          timestamp: new Date(),
         });
 
-        feedback.textContent = "Form submitted successfully!";
-        feedback.style.color = "green";
+        feedback.textContent = 'Form submitted successfully!';
+        feedback.style.color = 'green';
         form.reset(); // Clear the form
       } catch (error) {
-        feedback.textContent = "Failed to submit the form. Try again.";
-        feedback.style.color = "red";
-        console.error("Error adding document:", error);
+        feedback.textContent = 'Failed to submit the form. Try again.';
+        feedback.style.color = 'red';
+        console.error('Error adding document:', error);
       }
     });
   });
