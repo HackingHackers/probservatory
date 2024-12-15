@@ -1,4 +1,5 @@
 ---
+// Layout and Widget Imports
 import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
 import Features2 from '~/components/widgets/Features2.astro';
@@ -20,7 +21,8 @@ const metadata = {
       class="bold underline border-yellow-500"
       href="https://stellarium-web.org/"
       target="_blank"
-      rel="noopener noreferrer">Stellarium</a
+      rel="noopener noreferrer"
+      >Stellarium</a
     >, set the location as "Princeton", and time as the current time. Then start to find your star and observe! A more
     detailed guide to find your stars is available <a
       class="bold underline border-yellow-500"
@@ -32,6 +34,7 @@ const metadata = {
   <div>
     <p style="color: black;">.</p>
   </div>
+
   <!-- Contact Form -->
   <form
     id="contactForm"
@@ -57,10 +60,8 @@ const metadata = {
       type="number"
       id="frequency"
       name="frequency"
-      style="color: black;"
       required
-      min="100"
-      max="500"
+      style="color: black;"
       class="block w-full border rounded-md p-2"
     />
 
@@ -70,10 +71,8 @@ const metadata = {
       type="number"
       id="bandwidth"
       name="bandwidth"
-      style="color: black;"
       required
-      min="10"
-      max="200"
+      style="color: black;"
       class="block w-full border rounded-md p-2"
     />
 
@@ -83,22 +82,8 @@ const metadata = {
       type="number"
       id="duration"
       name="duration"
-      style="color: black;"
       required
-      min="1"
-      max="120"
-      class="block w-full border rounded-md p-2"
-    />
-
-    <!-- Location -->
-    <label for="location" class="block font-medium">Location</label>
-    <input
-      type="text"
-      id="location"
-      name="location"
       style="color: black;"
-      required
-      minlength="2"
       class="block w-full border rounded-md p-2"
     />
 
@@ -108,10 +93,8 @@ const metadata = {
       type="number"
       id="nbins"
       name="nbins"
-      style="color: black;"
       required
-      min="1"
-      max="1000"
+      style="color: black;"
       class="block w-full border rounded-md p-2"
     />
 
@@ -121,12 +104,15 @@ const metadata = {
       type="email"
       id="email"
       name="email"
-      style="color: black;"
       required
+      style="color: black;"
       class="block w-full border rounded-md p-2"
     />
 
-    <button type="submit" class="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">
+    <button
+      type="submit"
+      class="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600"
+    >
       Start Observation
     </button>
     <div id="formFeedback" class="text-sm mt-2"></div>
@@ -143,7 +129,7 @@ const metadata = {
       },
       {
         title: 'Email',
-        description: 'prisms.observatory@gmail.com',
+        description: 'probservatory@gmail.com',
         icon: 'tabler:mail',
       },
       {
@@ -159,9 +145,11 @@ const metadata = {
   import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js';
   import { getFirestore, addDoc, collection } from 'https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js';
 
+  // Initialize Firebase
   const firebaseConfig = {
     apiKey: 'AIzaSyA56Ha9_Hds0GrJ-iJZ_ayPeqUy46xJw7c',
     authDomain: 'psrt-data.firebaseapp.com',
+    databaseURL: "https://psrt-data-default-rtdb.firebaseio.com",
     projectId: 'psrt-data',
     storageBucket: 'psrt-data.firebasestorage.app',
     messagingSenderId: '522997813054',
@@ -172,60 +160,40 @@ const metadata = {
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app);
 
+  // Test Firestore Initialization
+  console.log('Firestore Initialized:', db);
+
   document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('contactForm');
     const feedback = document.getElementById('formFeedback');
 
     form.addEventListener('submit', async (event) => {
       event.preventDefault();
+      feedback.textContent = 'Submitting...';
+      feedback.style.color = 'blue';
 
       const formData = new FormData(form);
-      const observation = Object.fromEntries(formData.entries());
+      const observation = {
+        name: formData.get('name'),
+        frequency: parseFloat(formData.get('frequency')),
+        bandwidth: parseFloat(formData.get('bandwidth')),
+        duration: parseFloat(formData.get('duration')),
+        nbins: parseInt(formData.get('nbins'), 10),
+        email: formData.get('email'),
+        timestamp: new Date(),
+      };
 
-      // Validate values
-      const frequency = parseFloat(observation.frequency);
-      const bandwidth = parseFloat(observation.bandwidth);
-      const duration = parseFloat(observation.duration);
-      const nbins = parseFloat(observation.nbins);
-
-      if (frequency < 100 || frequency > 500) {
-        feedback.textContent = 'Central Frequency must be between 100 and 500 MHz.';
-        feedback.style.color = 'red';
-        return;
-      }
-
-      if (bandwidth < 10 || bandwidth > 200) {
-        feedback.textContent = 'Bandwidth must be between 10 and 200 MHz.';
-        feedback.style.color = 'red';
-        return;
-      }
-
-      if (duration < 1 || duration > 120) {
-        feedback.textContent = 'Duration must be between 1 and 120 minutes.';
-        feedback.style.color = 'red';
-        return;
-      }
-
-      if (nbins < 1 || nbins > 1000) {
-        feedback.textContent = 'nbins must be between 1 and 1000.';
-        feedback.style.color = 'red';
-        return;
-      }
+      console.log('Form Data:', observation);
 
       try {
-        // Add to Firestore
-        await addDoc(collection(db, 'observations'), {
-          ...observation,
-          timestamp: new Date(),
-        });
-
-        feedback.textContent = 'Observation request submitted successfully!';
+        await addDoc(collection(db, 'observations'), observation);
+        feedback.textContent = 'Observation submitted successfully!';
         feedback.style.color = 'green';
         form.reset();
       } catch (error) {
-        feedback.textContent = 'Error submitting request. Please try again.';
+        console.error('Firestore Error:', error);
+        feedback.textContent = 'Error: Could not submit. Please try again.';
         feedback.style.color = 'red';
-        console.error('Error:', error);
       }
     });
   });
