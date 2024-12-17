@@ -143,7 +143,7 @@ const metadata = {
 
 <script type="module">
   import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js';
-  import { getFirestore, addDoc, collection } from 'https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js';
+  import { getDatabase, ref, set } from '/firebase/database'; // Import Realtime Database functions
 
   // Initialize Firebase
   const firebaseConfig = {
@@ -158,10 +158,10 @@ const metadata = {
   };
 
   const app = initializeApp(firebaseConfig);
-  const db = getFirestore(app);
+  const db = getDatabase(); // Get Realtime Database reference
 
-  // Test Firestore Initialization
-  console.log('Firestore Initialized:', db);
+  // Test Realtime Database Initialization
+  console.log('Realtime Database Initialized:', db);
 
   document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('contactForm');
@@ -183,18 +183,20 @@ const metadata = {
         timestamp: new Date(),
       };
 
-      console.log('Form Data:', observation);
-
       try {
-        await addDoc(collection(db, 'observations'), observation);
+        // Write data to Realtime Database
+        const observationsRef = ref(db, 'Observations'); // Reference to your 'Observations' node
+        await set(observationsRef, observation); // Write the observation data
+
         feedback.textContent = 'Observation submitted successfully!';
         feedback.style.color = 'green';
         form.reset();
       } catch (error) {
-        console.error('Firestore Error:', error);
+        console.error('Realtime Database Error:', error);
         feedback.textContent = 'Error: Could not submit. Please try again.';
         feedback.style.color = 'red';
       }
     });
   });
 </script>
+
