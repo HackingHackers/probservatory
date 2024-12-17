@@ -2,7 +2,7 @@
 publishDate: 2024-09-20T00:00:00Z
 title: Astronomy Picture shooting
 excerpt: We take the beautiful pictures in the field under a silent night. The moon and stars were pretty, and our lives are lovely.
-image: ~/assets/images/2024-09-14-0132_7-Moon_0013.PNG
+image: https://images.unsplash.com/photo-1734453851863-bf4335622157?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
 tags:
   - astro
   - tailwind css
