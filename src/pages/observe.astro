@@ -21,8 +21,7 @@ const metadata = {
       class="bold underline border-yellow-500"
       href="https://stellarium-web.org/"
       target="_blank"
-      rel="noopener noreferrer"
-      >Stellarium</a
+      rel="noopener noreferrer">Stellarium</a
     >, set the location as "Princeton", and time as the current time. Then start to find your star and observe! A more
     detailed guide to find your stars is available <a
       class="bold underline border-yellow-500"
@@ -109,10 +108,7 @@ const metadata = {
       class="block w-full border rounded-md p-2"
     />
 
-    <button
-      type="submit"
-      class="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600"
-    >
+    <button type="submit" class="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">
       Start Observation
     </button>
     <div id="formFeedback" class="text-sm mt-2"></div>
@@ -142,22 +138,22 @@ const metadata = {
 </Layout>
 
 <script type="module">
-  import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js';
+  // import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js';
   import { getDatabase, ref, set } from '/firebase/database'; // Import Realtime Database functions
 
   // Initialize Firebase
-  const firebaseConfig = {
-    apiKey: 'AIzaSyA56Ha9_Hds0GrJ-iJZ_ayPeqUy46xJw7c',
-    authDomain: 'psrt-data.firebaseapp.com',
-    databaseURL: "https://psrt-data-default-rtdb.firebaseio.com",
-    projectId: 'psrt-data',
-    storageBucket: 'psrt-data.firebasestorage.app',
-    messagingSenderId: '522997813054',
-    appId: '1:522997813054:web:0baa7dd543b947f248266f',
-    measurementId: 'G-DFVS3PHZYN',
-  };
+  // const firebaseConfig = {
+  //   apiKey: 'AIzaSyA56Ha9_Hds0GrJ-iJZ_ayPeqUy46xJw7c',
+  //   authDomain: 'psrt-data.firebaseapp.com',
+  //   databaseURL: 'https://psrt-data-default-rtdb.firebaseio.com',
+  //   projectId: 'psrt-data',
+  //   storageBucket: 'psrt-data.firebasestorage.app',
+  //   messagingSenderId: '522997813054',
+  //   appId: '1:522997813054:web:0baa7dd543b947f248266f',
+  //   measurementId: 'G-DFVS3PHZYN',
+  // };
 
-  const app = initializeApp(firebaseConfig);
+  // const app = initializeApp(firebaseConfig);
   const db = getDatabase(); // Get Realtime Database reference
 
   // Test Realtime Database Initialization
@@ -199,4 +195,3 @@ const metadata = {
     });
   });
 </script>
-
