@@ -1,0 +1,44 @@
+---
+// Layout and Widget Imports
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Submit Successfully',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+  <HeroText tagline="Observe" title="Control Panel" />
+
+  <!-- Instruction Panel -->
+  <div
+    class="max-w-xl mx-auto rounded-lg backdrop-blur border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 shadow p-4 sm:p-6 lg:p-8 w-full"
+  >
+    Your request has already been submitted to the local observatory. Observed data will be sent to your email once the
+    observation is finished. Thank you for using PSRT.
+  </div>
+
+  <Features2
+  title="Other Assistance"
+  items={[
+    {
+      title: 'Website',
+      description: 'probservatory.org',
+      icon: 'tabler:device-desktop-star',
+    },
+    {
+      title: 'Email',
+      description: 'probservatory@gmail.com',
+      icon: 'tabler:mail',
+    },
+    {
+      title: 'Location',
+      description: '19 Lambert Dr, Princeton, NJ, USA',
+      icon: 'tabler:map-pin',
+    },
+  ]}
+/>
+</Layout>
